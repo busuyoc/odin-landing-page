@@ -1,0 +1,217 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* Design System Variables */
+:root {
+  /* Font */
+  --font-family: 'Roboto', sans-serif;
+
+  /* Colors */
+  --color-dark-background: #1F2937; /* Hero and footer background */
+  --color-light-text: #F9FAF8; /* Hero main text, header logo text */
+  --color-secondary-text: #E5E7EB; /* Hero secondary text, header link text, quote section background */
+  --color-button-background: #3882F6; /* Button color */
+  --color-information-header-text: #1F2937; /* Information header text */
+
+  /* Font Sizes */
+  --font-size-hero-main: 48px; /* Hero main text */
+  --font-size-hero-secondary: 18px; /* Hero secondary text, header link text */
+  --font-size-header-logo: 24px; /* Header logo text */
+  --font-size-information-header: 36px; /* Information header text */
+  --font-size-quote-text: 36px; /* Quote text */
+
+  /* Font Weights */
+  --font-weight-bold: 900; /* Bold font weight for hero main and information header text */
+  --font-weight-light-italic: 300; /* Light italic font weight for quote text */
+
+  /* Additional Styles */
+  --quote-text-style: italic;
+}
+
+/* Global Styles */
+body {
+  font-family: var(--font-family);
+}
+
+/* Header Styles */
+header {
+  background-color: var(--color-dark-background);
+  color: var(--color-light-text);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: var(--font-size-header-logo);
+  color: var(--color-light-text);
+}
+
+header nav a {
+  font-size: var(--font-size-hero-secondary);
+  color: var(--color-secondary-text);
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+/* Hero Section Styles */
+.hero {
+  background-color: var(--color-dark-background);
+  color: var(--color-light-text);
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  gap: 40px;
+
+}
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+  min-width: 600px;
+
+}
+
+.hero h1 {
+  font-size: var(--font-size-hero-main);
+  font-weight: var(--font-weight-bold);
+}
+
+.hero p {
+  font-size: var(--font-size-hero-secondary);
+  color: var(--color-secondary-text);
+}
+
+.hero .button {
+  background-color: var(--color-button-background);
+  width: 120px;
+  height: 40px;
+  color: var(--color-light-text);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size-hero-secondary);
+}
+
+.hero .placeholder-image {
+  margin-top: 20px;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-secondary-text);
+}
+
+/* Information Section Styles */
+.information {
+  padding: 40px;
+  text-align: center;
+}
+
+.information h2 {
+  font-size: var(--font-size-information-header);
+  color: var(--color-information-header-text);
+  font-weight: var(--font-weight-bold);
+}
+.info-items-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  /* height: 200px; */
+  text-align: center;
+  color: gray;
+}
+.info-item-box {
+  border: solid 3px var(--color-button-background);
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+}
+
+
+/* Quote Section Styles */
+.quote-section {
+  background-color: var(--color-secondary-text);
+  padding: 40px;
+  text-align: left;
+}
+
+.quote-section p {
+  font-size: var(--font-size-quote-text);
+  font-weight: var(--font-weight-light-italic);
+  font-style: var(--quote-text-style);
+}
+
+.quote-section > p:last-child {
+  text-align: right;
+  
+}
+/* Call to Action Section Styles */
+.call-to-action {
+  padding: 40px;
+  text-align: center;
+}
+.cta-widget {
+  background-color: var(--color-button-background);
+  border-radius: 16px;
+  padding: 40px 80px;
+
+  display: flex;
+  justify-content: space-between;
+  
+}
+.cta-text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.call-to-action h2 {
+  font-size: 24px;
+  color: white;
+  font-weight: var(--font-weight-bold);
+}
+
+.call-to-action p {
+  font-size: 18px;
+  color: var(--color-secondary-text);
+}
+
+.call-to-action .button {
+  background-color: var(--color-button-background);
+  color: var(--color-light-text);
+  padding: 4px 20px;
+  max-height: 40px;
+  border: solid 2px white;
+  border-radius: 16px;
+  display: block;
+  cursor: pointer;
+  font-size: var(--font-size-hero-secondary);
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--color-dark-background);
+  color: var(--color-light-text);
+  text-align: center;
+  padding: 20px;
+}
